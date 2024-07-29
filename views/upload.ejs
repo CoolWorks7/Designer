@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designer | Upload</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/upload.css">
+  </head>
+
+  <script src="/js/upload.js" defer></script>
+  <script src="/js/helper.js" defer></script>
+
+  <body>
+
+    <div class="upload-image-section section">
+      <div class="top">
+        <div class="title">Upload an Image</div>
+        <div class="sub">PNG and JPG files are allowed!</div>
+      </div>
+
+      <label class="uploader" for="file-selector" >
+        <div class="overlay"></div>
+        
+        <svg viewBox="0 0 120 100" style="--size: 8rem">
+          <path class="cloud" d="
+            M35,70 C10,70 10,35 35,35
+            C35,0 85,0 85,35
+            C110,35 110,70 85,70
+          "/>
+
+          <path class="arrow" d="
+            M60,85 L60,60 
+            M60,60 L50,70
+            M60,60 L70,70
+          "/>
+        </svg>
+
+        <div class="sub">Choose a file to upload</div>
+      </label>
+
+      <input type="file" name="" id="file-selector" accept="image/x-png, image/jpeg">
+    </div>
+
+    <div class="preview-image-section section">
+      <div class="top">
+        <div class="title">Preview Image</div>
+      </div>
+
+      <div class="img-container"></div>
+
+      <div class="buttons">
+        <button class="upload-btn">Upload</button>
+        <button class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+    
+  </body>
+</html>

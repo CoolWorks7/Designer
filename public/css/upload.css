@@ -1,0 +1,113 @@
+body {
+  background: var(--col-7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  padding: 2rem;
+  border-radius: 20px;
+  background: var(--col-11);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: var(--small-width);
+}
+
+.section .top {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+.section .top .title {
+  color: var(--col-6);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.section .sub {
+  color: var(--col-9);
+  font-size: .7rem;
+  font-weight: 500;
+  z-index: 3;
+}
+
+.section .img-container {
+  height: 40dvmin;
+}
+
+.section .buttons {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+.section button {
+  padding: .5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.section button.upload-btn {
+  background: var(--col-11);
+  border: 1px solid var(--col-9);
+}
+.section button.cancel-btn {
+  background: var(--col-9);
+  border: 1px solid var(--col-9);
+  color: var(--col-11);
+}
+
+.preview-image-section {
+  display: none;
+  gap: 1rem;
+}
+
+.uploader {
+  position: relative;
+  padding: 1.5rem;
+  border: .3rem dashed #0003;
+  background: var(--col-11);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all .3s ease;
+  overflow: hidden;
+}
+
+.uploader .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--col-2);
+  clip-path: circle(0px at 50% 50%);
+  transition: all.3s ease-in-out;
+}
+
+.uploader svg {
+  position: relative;
+  height: var(--size);
+  width: calc(120/100 * var(--size));
+}
+.uploader svg path {
+  fill: none;
+  stroke: var(--col-10);
+  stroke-linecap: round;
+  stroke-width: 5;
+  transform: translateY(0%);
+  transition: all .3s ease;
+}
+
+#file-selector{
+  display: none;
+}
